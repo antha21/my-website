@@ -460,8 +460,12 @@
 
 
 
+
+      
+          
+ 
 <!-- Resume Section -->
-<section id="resume" class="active" style="position: relative; overflow: hidden; min-height: 95vh; color: white;">
+<section id="resume" class="active" style="position: relative; overflow: hidden; min-height: 90vh; color: white;">
 
     <!-- Background -->
     <div class="edu-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:1; overflow:hidden; 
@@ -573,77 +577,6 @@
 
     </div>
 </section>
-
-<style>
-/* Resume Cards */
-.resume-card {
-    width: 90%;
-    max-width: 900px;
-    margin-bottom: 50px;
-    padding: 40px;
-    border-radius: 25px;
-    border-left: 10px solid; /* Keep the left indicator visible */
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    transition: transform 0.3s ease-in-out;
-}
-
-.card-header {
-    font-size: 2rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-    border-bottom: 2px solid rgba(255,255,255,0.4);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-}
-
-.card-content p, .card-content ul { line-height: 1.6; margin-bottom: 15px; }
-.card-content ul { padding-left: 20px; }
-
-.resume-card:hover { transform: translateY(-5px); }
-
-/* Indicator Colors */
-.blue-card { border-left-color: #007bff; }
-.green-card { border-left-color: #28a745; }
-.yellow-card { border-left-color: #ffc107; }
-.red-card { border-left-color: #dc3545; }
-
-/* Floating formulas */
-.edu-bg span.formula {
-    position: absolute;
-    font-size: 1.9rem;
-    font-weight: bold;
-    color: rgba(0, 255, 255, 0.4);
-    text-shadow: 0 0 10px rgba(0,255,255,0.7), 0 0 20px rgba(0,100,255,0.5);
-    pointer-events: none;
-    animation: floatDiag 25s linear infinite alternate;
-}
-
-@keyframes floatDiag {
-    0%   { transform: translate(0,0) rotate(0deg); }
-    25%  { transform: translate(30px,-20px) rotate(10deg); }
-    50%  { transform: translate(-20px,-40px) rotate(-10deg); }
-    75%  { transform: translate(20px,-60px) rotate(15deg); }
-    100% { transform: translate(-30px,-80px) rotate(-15deg); }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    #resume h1 { font-size: 2.5rem; margin-top: 40px; }
-    .resume-card { padding: 30px; }
-    .card-header { font-size: 1.7rem; }
-    .card-content p, .card-content ul { font-size: 0.95rem; }
-}
-@media (max-width: 480px) {
-    #resume h1 { font-size: 2rem; margin-top: 30px; }
-    .resume-card { width: 95%; padding: 20px; }
-    .card-header { font-size: 1.4rem; }
-    .card-content p, .card-content ul { font-size: 0.75rem; }
-    .card-content ul li { font-size: 0.7rem; line-height: 1.4; }
-    .edu-bg span.formula { font-size: 1.2rem; }
-}
-</style>
 
 
 
