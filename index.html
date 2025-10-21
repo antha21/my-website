@@ -608,104 +608,105 @@
 <!-- Projects Section -->
 <section id="project" class="active" style="position: relative; overflow: hidden; min-height: 80vh; color: white;">
 
-	<div class="container" style="text-align: center;">
+    <!-- Background -->
+    <div class="project-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:1; overflow:hidden; 
+        background: linear-gradient(135deg, #001f3f 0%, #003366 50%, #001f3f 100%);"></div>
+
+    <div class="container" style="position: relative; z-index: 2; text-align: center;">
+
         <!-- Projects Header -->
-        <h2 class="section-title" style="font-size: 4rem; font-weight: 700; text-shadow: 2px 2px 6px rgba(0,0,0,0.5); margin-bottom: 80px; color: #ffffff;">
+        <h2 class="section-title" style="font-size: 4rem; font-weight: 700; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); margin-bottom: 80px; color: #ffffff; margin-top: 50px;">
             Projects
         </h2>
 
         <!-- Projects Grid -->
         <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; justify-items: center;">
 
-            <!-- Project 1 -->
-            <div class="project-card" style="background: #00796b; border-radius: 20px; padding: 25px; box-shadow: 0 12px 28px rgba(0,0,0,0.5); display: flex; flex-direction: column; justify-content: space-between;">
+            <!-- Example Project Card -->
+            <div class="project-card">
                 <div>
-                    <h5 class="project-title" style="font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #ffffff;">Diving in the Depths</h5>
-                    <p class="project-desc" style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; color:#ffffff;">
+                    <h5 class="project-title">Diving in the Depths</h5>
+                    <p class="project-desc">
                         Unraveling the hidden dynamics of pressure and volume in scuba diving. Developed mathematical models using Boyle’s Law and hydrostatic pressure in MATLAB, exploring effects of seawater temperature and depth variations.
                     </p>
                 </div>
-                <a href="Diving into the Depths Project 1.pdf" class="btn btn-view" target="_blank" style="display:inline-block; padding: 8px 16px; font-weight: 600; font-size: 0.9rem; border-radius: 8px; border: 2px solid #80cbc4; background-color: #26a69a; color:#fff; text-decoration:none; transition: all 0.3s; align-self: center; margin-top: auto;">View</a>
+                <a href="Diving into the Depths Project 1.pdf" target="_blank" class="btn-view">View</a>
             </div>
 
-            <!-- Project 2 -->
-            <div class="project-card" style="background: #00796b; border-radius: 20px; padding: 25px; box-shadow: 0 12px 28px rgba(0,0,0,0.5); display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <h5 class="project-title" style="font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #ffffff;">Analyzing Ant Behavior</h5>
-                    <p class="project-desc" style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; color:#ffffff;">
-                        Simulated ant foraging using Python-based cellular automaton models. Explored effects of chemical signals, pheromone diffusion, and population density on emergent trail patterns and aggregation behavior.
-                    </p>
-                </div>
-                <a href="Ant Movements.pdf" class="btn btn-view" target="_blank" style="display:inline-block; padding: 8px 16px; font-weight: 600; font-size: 0.9rem; border-radius: 8px; border: 2px solid #80cbc4; background-color: #26a69a; color:#fff; text-decoration:none; transition: all 0.3s; align-self: center; margin-top: auto;">View</a>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card" style="background: #00796b; border-radius: 20px; padding: 25px; box-shadow: 0 12px 28px rgba(0,0,0,0.5); display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <h5 class="project-title" style="font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #ffffff;">Cellular Automaton Simulation</h5>
-                    <p class="project-desc" style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; color:#ffffff;">
-                        Simulated animal foraging on a 20×20 grid using Python. Modeled memory, diffusion, and area-restricted search to analyze search efficiency and realistic adaptive behavior patterns.
-                    </p>
-                </div>
-                <a href="Cellular Automation Simulation of Open-Field Foraging with Area-Restricted Search.pdf" class="btn btn-view" target="_blank" style="display:inline-block; padding: 8px 16px; font-weight: 600; font-size: 0.9rem; border-radius: 8px; border: 2px solid #80cbc4; background-color: #26a69a; color:#fff; text-decoration:none; transition: all 0.3s; align-self: center; margin-top: auto;">View</a>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="project-card" style="background: #00796b; border-radius: 20px; padding: 25px; box-shadow: 0 12px 28px rgba(0,0,0,0.5); display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <h5 class="project-title" style="font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #ffffff;">The Secret Treasure Hunt</h5>
-                    <p class="project-desc" style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; color:#ffffff;">
-                        An interactive ArcGIS Web Experience exploring Byron Preiss’ 1982 treasure hunt. Features maps, clues, and historical context, engaging users in puzzle-solving and geographic sleuthing.
-                    </p>
-                </div>
-                <a href="https://www.arcgis.com/home/item.html?id=8e86bf2eea124a93853c797c2fb0b5e4" class="btn btn-view" target="_blank" style="display:inline-block; padding: 8px 16px; font-weight: 600; font-size: 0.9rem; border-radius: 8px; border: 2px solid #80cbc4; background-color: #26a69a; color:#fff; text-decoration:none; transition: all 0.3s; align-self: center; margin-top: auto;">View</a>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="project-card" style="background: #00796b; border-radius: 20px; padding: 25px; box-shadow: 0 12px 28px rgba(0,0,0,0.5); display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <h5 class="project-title" style="font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #ffffff;">Grammys.com Project</h5>
-                    <p class="project-desc" style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; color:#ffffff;">
-                        Analyzed user engagement and traffic metrics for Grammys.com post-split. Explored key KPIs, device usage (73.7% mobile), and visualized spikes around events using pivot tables and charts.
-                    </p>
-                </div>
-                <a href="1754587074941.jpg" class="btn btn-view" target="_blank" style="display:inline-block; padding: 8px 16px; font-weight: 600; font-size: 0.9rem; border-radius: 8px; border: 2px solid #80cbc4; background-color: #26a69a; color:#fff; text-decoration:none; transition: all 0.3s; align-self: center; margin-top: auto;">View</a>
-            </div>
-
-            <!-- Project 6 -->
-            <div class="project-card" style="background: #00796b; border-radius: 20px; padding: 25px; box-shadow: 0 12px 28px rgba(0,0,0,0.5); display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <h5 class="project-title" style="font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #ffffff;">Intel Data Center Project</h5>
-                    <p class="project-desc" style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; color:#ffffff;">
-                        Partnered with Intel’s Sustainability Team to analyze U.S. energy data for optimal data center location. Built interactive Tableau dashboards for supply-demand visualization, renewable energy adoption, and treemaps for insights.
-                    </p>
-                </div>
-                <a href="1754590005513.jpg" class="btn btn-view" target="_blank" style="display:inline-block; padding: 8px 16px; font-weight: 600; font-size: 0.9rem; border-radius: 8px; border: 2px solid #80cbc4; background-color: #26a69a; color:#fff; text-decoration:none; transition: all 0.3s; align-self: center; margin-top: auto;">View</a>
-            </div>
-
+            <!-- Repeat project cards as needed -->
         </div>
     </div>
+
 </section>
 
 <style>
+/* Project Cards */
+.project-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 30px;
+    max-width: 350px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
 .project-card:hover {
     transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.btn-view {
+    display: inline-block;
+    padding: 10px 18px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    border: 2px solid #00c6ff;
+    background-color: #0072ff;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+    align-self: center;
+}
+
+.btn-view:hover {
+    background-color: #00d4ff;
+    border-color: #00d4ff;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .section-title { font-size: 3rem; margin-bottom: 60px; }
-    .project-card { width: 90%; padding: 20px; }
+    .section-title { font-size: 3rem; margin-bottom: 60px; margin-top: 40px; }
+    .project-card { width: 90%; padding: 25px; }
 }
 @media (max-width: 480px) {
-    .section-title { font-size: 2.5rem; margin-bottom: 40px; }
-    .project-card { width: 95%; padding: 15px; }
+    .section-title { font-size: 2.5rem; margin-bottom: 40px; margin-top: 30px; }
+    .project-card { width: 95%; padding: 20px; }
     .project-title { font-size: 1.1rem; }
     .project-desc { font-size: 0.85rem; }
-    .btn-view { font-size: 0.8rem; padding: 6px 12px; }
+    .btn-view { font-size: 0.8rem; padding: 8px 14px; }
 }
 </style>
+
 
 
 
