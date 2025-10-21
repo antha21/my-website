@@ -464,10 +464,10 @@
 <section id="resume" style="position: relative; overflow: hidden; min-height: 100vh; color: #fff; padding: 50px 0; font-family: 'Montserrat', sans-serif;">
 
    <!-- Background -->
-   <div class="edu-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:1; overflow:hidden; background: linear-gradient(135deg, #0d1f2d, #1a3a5a, #0d1f2d);">
-       <!-- Floating formulas -->
+   <div class="edu-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:1; overflow:hidden; 
+        background: linear-gradient(135deg, #0a0f1a 0%, #1a2336 50%, #0a0f1a 100%);">
 
-       <!-- Greek Letters -->
+       <!-- Floating formulas -->
        <span class="formula">α</span><span class="formula">β</span><span class="formula">γ</span>
        <span class="formula">δ</span><span class="formula">ε</span><span class="formula">ζ</span>
        <span class="formula">η</span><span class="formula">θ</span><span class="formula">ι</span>
@@ -478,29 +478,13 @@
        <span class="formula">χ</span><span class="formula">ψ</span><span class="formula">ω</span>
        <span class="formula">Φ</span><span class="formula">Θ</span><span class="formula">Δ</span>
        <span class="formula">Σ</span><span class="formula">Ω</span><span class="formula">Π</span>
-
-       <!-- Math Operators -->
-       <span class="formula">+</span><span class="formula">−</span><span class="formula">×</span>
-       <span class="formula">÷</span><span class="formula">=</span><span class="formula">≠</span>
-       <span class="formula">≈</span><span class="formula">∝</span><span class="formula">∞</span>
-       <span class="formula">√</span><span class="formula">∑</span><span class="formula">∏</span>
-       <span class="formula">∫</span><span class="formula">∂</span><span class="formula">∇</span>
-       <span class="formula">∴</span><span class="formula">∵</span><span class="formula">±</span>
-
-       <!-- Set Theory / Logic -->
-       <span class="formula">∈</span><span class="formula">∉</span><span class="formula">⊂</span>
-       <span class="formula">⊃</span><span class="formula">⊆</span><span class="formula">⊇</span>
-       <span class="formula">∪</span><span class="formula">∩</span><span class="formula">∅</span>
-       <span class="formula">⊕</span><span class="formula">⊗</span><span class="formula">⊥</span>
-       <span class="formula">→</span><span class="formula">←</span><span class="formula">↔</span>
-       <span class="formula">⇌</span>
    </div>
 
    <!-- Main Container -->
    <div class="container-fluid d-flex flex-column align-items-center" style="position: relative; z-index: 2;">
 
        <!-- Header -->
-       <h1 class="mb-5" style="font-size: 3rem; text-align: center; text-shadow: 2px 2px 8px rgba(0,0,0,0.6); margin-top: 90px;">
+       <h1 class="mb-5" style="font-size: 3rem; text-align: center; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); margin-top: 90px;">
            My Resume
        </h1>
 
@@ -589,104 +573,20 @@
 
    </div>
 </section>
-	
+
 <style>
-/* Book-like Resume Cards */
-.resume-card {
-    width: 90%;
-    max-width: 900px;
-    margin-bottom: 50px;
-    padding: 40px;
-    border-radius: 15px;
-    border: 3px solid rgba(0,0,0,0.6);
-    backdrop-filter: blur(15px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-    background: rgba(255,255,255,0.1);
-    transition: transform 0.3s ease-in-out;
-    position: relative;
-}
-
-/* Book Header with Icon */
-.card-header {
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
-    border-bottom: 2px solid rgba(255,255,255,0.6);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Card Content */
-.card-content p, .card-content ul { 
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.card-content ul { padding-left: 20px; }
-
-.resume-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Individual Section Colors (books) */
-.blue-card { background: rgba(0,123,255,0.15); border-left: 10px solid #007bff; }
-.green-card { background: rgba(40,167,69,0.15); border-left: 10px solid #28a745; }
-.yellow-card { background: rgba(255,193,7,0.15); border-left: 10px solid #ffc107; }
-.red-card { background: rgba(220,53,69,0.15); border-left: 10px solid #dc3545; }
-
-/* Floating background formulas */
+/* Floating background formulas - Home-style glow */
 .edu-bg span.formula {
     position: absolute;
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: bold;
+    color: rgba(0, 255, 255, 0.6);
+    text-shadow: 0 0 10px rgba(0,255,255,0.8), 0 0 25px rgba(0,100,255,0.6);
     pointer-events: none;
     animation: floatDiag 25s linear infinite alternate;
-    color: rgba(255,255,255,0.15);
 }
 
-/* Left-side formulas (mostly left edge) */
-.edu-bg span.formula:nth-child(1)  { top: 5%;  left: 5%;  animation-delay: -4s; }
-.edu-bg span.formula:nth-child(2)  { top: 15%; left: 10%; animation-delay: -3.5s; }
-.edu-bg span.formula:nth-child(3)  { top: 24%; left: 5%;  animation-delay: -3s; }
-.edu-bg span.formula:nth-child(4)  { top: 35%; left: 12%; animation-delay: -2.5s; }
-.edu-bg span.formula:nth-child(5)  { top: 45%; left: 8%;  animation-delay: -2s; }
-.edu-bg span.formula:nth-child(6)  { top: 50%; left: 15%; animation-delay: -1.5s; }
-.edu-bg span.formula:nth-child(7)  { top: 65%; left: 10%; animation-delay: -1s; }
-.edu-bg span.formula:nth-child(8)  { top: 75%; left: 12%; animation-delay: -0.5s; }
-.edu-bg span.formula:nth-child(9)  { top: 85%; left: 5%;  animation-delay: 0s; }
-.edu-bg span.formula:nth-child(10) { top: 95%; left: 15%; animation-delay: 0.5s; }
-
-/* Right-side formulas (mostly right edge) */
-.edu-bg span.formula:nth-child(11) { top: 10%; left: 90%; animation-delay: -4s; }
-.edu-bg span.formula:nth-child(12) { top: 20%; left: 92%; animation-delay: -3.5s; }
-.edu-bg span.formula:nth-child(13) { top: 30%; left: 88%; animation-delay: -3s; }
-.edu-bg span.formula:nth-child(14) { top: 40%; left: 95%; animation-delay: -2.5s; }
-.edu-bg span.formula:nth-child(15) { top: 50%; left: 85%; animation-delay: -2s; }
-.edu-bg span.formula:nth-child(16) { top: 60%; left: 90%; animation-delay: -1.5s; }
-.edu-bg span.formula:nth-child(17) { top: 70%; left: 92%; animation-delay: -1s; }
-.edu-bg span.formula:nth-child(18) { top: 83%; left: 88%; animation-delay: -0.5s; }
-.edu-bg span.formula:nth-child(19) { top: 90%; left: 95%; animation-delay: 0s; }
-.edu-bg span.formula:nth-child(20) { top: 95%; left: 85%; animation-delay: 0.5s; }
-
-/* Mix of left & right for variety */
-.edu-bg span.formula:nth-child(21) { top: 12%; left: 5%;  animation-delay: -10s; }
-.edu-bg span.formula:nth-child(22) { top: 18%; left: 95%; animation-delay: -10.5s; }
-.edu-bg span.formula:nth-child(23) { top: 28%; left: 8%;  animation-delay: -11s; }
-.edu-bg span.formula:nth-child(24) { top: 33%; left: 92%; animation-delay: -11.5s; }
-.edu-bg span.formula:nth-child(25) { top: 40%; left: 12%; animation-delay: -12s; }
-.edu-bg span.formula:nth-child(26) { top: 48%; left: 88%; animation-delay: -12.5s; }
-.edu-bg span.formula:nth-child(27) { top: 55%; left: 15%; animation-delay: -13s; }
-.edu-bg span.formula:nth-child(28) { top: 63%; left: 85%; animation-delay: -13.5s; }
-.edu-bg span.formula:nth-child(29) { top: 70%; left: 10%; animation-delay: -14s; }
-.edu-bg span.formula:nth-child(30) { top: 78%; left: 90%; animation-delay: -14.5s; }
-
-/* Remaining symbols (31+) automatically smaller and faint */
-.edu-bg span.formula:nth-child(n+31) { font-size: 1.5rem; color: rgba(255,255,255,0.1); }
-
-/* Float Animation */
+/* Float animation */
 @keyframes floatDiag {
     0%   { transform: translate(0,0) rotate(0deg); }
     25%  { transform: translate(30px,-20px) rotate(10deg); }
@@ -695,65 +595,62 @@
     100% { transform: translate(-30px,-80px) rotate(-15deg); }
 }
 
-/* RESUME SECTION RESPONSIVE ADJUSTMENTS */
-
-/* Split-screen / tablets: 481px - 768px */
-@media only screen and (max-width: 768px) and (min-width: 481px) {
-    #resume h1 {
-        font-size: 2.5rem; /* slightly smaller than desktop */
-        margin-top: 60px;  /* adjust top spacing */
-    }
-
-    .resume-card {
-        padding: 30px;      /* slightly smaller padding */
-    }
-
-    .card-header {
-        font-size: 1.5rem; /* reduce header size */
-    }
-
-    .card-content p, .card-content ul {
-        font-size: 0.95rem; /* slightly smaller text */
-    }
+/* Resume Cards styled like Home About boxes */
+.resume-card {
+    width: 90%;
+    max-width: 900px;
+    margin-bottom: 50px;
+    padding: 40px;
+    border-radius: 25px;
+    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Phones: max-width 480px */
-@media only screen and (max-width: 480px) {
-    #resume h1 {
-        font-size: 2rem; /* smaller for phone */
-        margin-top: 40px;
-    }
-
-    .resume-card {
-        width: 95%;       /* fit smaller screens */
-        padding: 20px;    /* smaller padding */
-    }
-
-    .card-header {
-        font-size: 1.3rem;
-    }
-
-    .card-content p, .card-content ul {
-        font-size: 0.75rem;
-    }
-
-	/* Reduce font size for lists inside cards */
-    .card-content ul li {
-        font-size: 0.7rem; /* slightly smaller than paragraphs */
-        line-height: 1.4;  /* keep spacing readable */
-    }
-
-    /* Floating background formulas smaller on phones */
-    .edu-bg span.formula {
-        font-size: 1.2rem;
-    }
-
-    .edu-bg span.formula:nth-child(n+31) {
-        font-size: 1rem;
-    }
+/* Card header */
+.card-header {
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
-	
+
+/* Card content */
+.card-content p, .card-content ul { 
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.card-content ul { padding-left: 20px; }
+
+.resume-card:hover { transform: translateY(-5px); }
+
+/* Individual card colors */
+.blue-card { border-left: 10px solid #007bff; }
+.green-card { border-left: 10px solid #28a745; }
+.yellow-card { border-left: 10px solid #ffc107; }
+.red-card { border-left: 10px solid #dc3545; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #resume h1 { font-size: 2.5rem; margin-top: 60px; }
+    .resume-card { padding: 30px; }
+    .card-header { font-size: 1.7rem; }
+    .card-content p, .card-content ul { font-size: 0.95rem; }
+}
+@media (max-width: 480px) {
+    #resume h1 { font-size: 2rem; margin-top: 40px; }
+    .resume-card { width: 95%; padding: 20px; }
+    .card-header { font-size: 1.4rem; }
+    .card-content p, .card-content ul { font-size: 0.75rem; }
+    .card-content ul li { font-size: 0.7rem; line-height: 1.4; }
+    .edu-bg span.formula { font-size: 1.2rem; }
+}
 </style>
+
 
 
 
