@@ -461,10 +461,10 @@
 <section id="resume" style="position: relative; overflow: hidden; min-height: 100vh; color: white;">	
 	
    <!-- Background -->
-   <div class="edu-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:1; overflow:hidden; background: linear-gradient(135deg, #2b44a0, #e23b3b, #ffdf70);">
-       <!-- Floating formulas -->
+   <div class="edu-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:1; overflow:hidden; 
+       background: linear-gradient(135deg, #2b44a0, #e23b3b, #ffdf70);">
 
-       <!-- Greek Letters -->
+       <!-- Floating formulas -->
        <span class="formula">α</span><span class="formula">β</span><span class="formula">γ</span>
        <span class="formula">δ</span><span class="formula">ε</span><span class="formula">ζ</span>
        <span class="formula">η</span><span class="formula">θ</span><span class="formula">ι</span>
@@ -475,16 +475,12 @@
        <span class="formula">χ</span><span class="formula">ψ</span><span class="formula">ω</span>
        <span class="formula">Φ</span><span class="formula">Θ</span><span class="formula">Δ</span>
        <span class="formula">Σ</span><span class="formula">Ω</span><span class="formula">Π</span>
-
-       <!-- Math Operators -->
        <span class="formula">+</span><span class="formula">−</span><span class="formula">×</span>
        <span class="formula">÷</span><span class="formula">=</span><span class="formula">≠</span>
        <span class="formula">≈</span><span class="formula">∝</span><span class="formula">∞</span>
        <span class="formula">√</span><span class="formula">∑</span><span class="formula">∏</span>
        <span class="formula">∫</span><span class="formula">∂</span><span class="formula">∇</span>
        <span class="formula">∴</span><span class="formula">∵</span><span class="formula">±</span>
-
-       <!-- Set Theory / Logic -->
        <span class="formula">∈</span><span class="formula">∉</span><span class="formula">⊂</span>
        <span class="formula">⊃</span><span class="formula">⊆</span><span class="formula">⊇</span>
        <span class="formula">∪</span><span class="formula">∩</span><span class="formula">∅</span>
@@ -501,8 +497,8 @@
            My Resume
        </h1>
 
-       <!-- EDUCATION Card -->
-       <div class="resume-card blue-card">
+       <!-- EDUCATION -->
+       <div class="resume-card">
            <div class="card-header">🎓 Education</div>
            <div class="card-content">
                <div class="school">
@@ -519,8 +515,8 @@
            </div>
        </div>
 
-       <!-- SKILLS Card -->
-       <div class="resume-card green-card">
+       <!-- SKILLS -->
+       <div class="resume-card">
            <div class="card-header">🛠️ Skills</div>
            <div class="card-content">
                <p><strong>Tools & Technologies:</strong> Excel (Advanced), Tableau, R, Python, C++, MATLAB, Oracle SQL</p>
@@ -530,8 +526,8 @@
            </div>
        </div>
 
-       <!-- WORK EXPERIENCE Card -->
-       <div class="resume-card yellow-card">
+       <!-- WORK EXPERIENCE -->
+       <div class="resume-card">
            <div class="card-header">💼 Work Experience</div>
            <div class="card-content">
                <div class="job">
@@ -566,8 +562,8 @@
            </div>
        </div>
 
-       <!-- CERTIFICATIONS Card -->
-       <div class="resume-card red-card">
+       <!-- CERTIFICATIONS -->
+       <div class="resume-card">
            <div class="card-header">📜 Certifications</div>
            <div class="card-content">
                <ul>
@@ -586,102 +582,56 @@
 
    </div>
 </section>
-	
+
 <style>
-/* Book-like Resume Cards */
+/* Solid Resume Card Style */
 .resume-card {
     width: 90%;
     max-width: 900px;
     margin-bottom: 50px;
     padding: 40px;
     border-radius: 15px;
-    border: 3px solid rgba(0,0,0,0.6);
-    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    background: rgba(20, 20, 40, 0.85); /* deep navy solid background */
     box-shadow: 0 15px 30px rgba(0,0,0,0.5);
-    background: rgba(255,255,255,0.1);
-    transition: transform 0.3s ease-in-out;
-    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
-/* Book Header with Icon */
-.card-header {
-    font-size: 1.8rem;
-    font-weight: 700;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
-    border-bottom: 2px solid rgba(255,255,255,0.6);
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Card Content */
-.card-content p, .card-content ul { 
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.card-content ul { padding-left: 20px; }
 
 .resume-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 25px 40px rgba(0,0,0,0.6);
 }
 
-/* Individual Section Colors (books) */
-.blue-card { background: rgba(0,123,255,0.15); border-left: 10px solid #007bff; }
-.green-card { background: rgba(40,167,69,0.15); border-left: 10px solid #28a745; }
-.yellow-card { background: rgba(255,193,7,0.15); border-left: 10px solid #ffc107; }
-.red-card { background: rgba(220,53,69,0.15); border-left: 10px solid #dc3545; }
+/* Header Styling */
+.card-header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #9dd9ff;
+    text-shadow: 0 0 6px rgba(0,180,255,0.8);
+    border-bottom: 2px solid rgba(255,255,255,0.3);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
 
-/* Floating background formulas */
+/* Text and lists */
+.card-content p, .card-content ul { 
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+.card-content ul { padding-left: 20px; }
+
+/* Glowing Blue Math Symbols */
 .edu-bg span.formula {
     position: absolute;
     font-size: 2rem;
     font-weight: bold;
     pointer-events: none;
+    color: rgba(0,180,255,0.4);
+    text-shadow: 0 0 10px rgba(0,180,255,0.8), 0 0 20px rgba(0,180,255,0.5);
     animation: floatDiag 25s linear infinite alternate;
-    color: rgba(255,255,255,0.15);
 }
-
-/* Left-side formulas (mostly left edge) */
-.edu-bg span.formula:nth-child(1)  { top: 5%;  left: 5%;  animation-delay: -4s; }
-.edu-bg span.formula:nth-child(2)  { top: 15%; left: 10%; animation-delay: -3.5s; }
-.edu-bg span.formula:nth-child(3)  { top: 24%; left: 5%;  animation-delay: -3s; }
-.edu-bg span.formula:nth-child(4)  { top: 35%; left: 12%; animation-delay: -2.5s; }
-.edu-bg span.formula:nth-child(5)  { top: 45%; left: 8%;  animation-delay: -2s; }
-.edu-bg span.formula:nth-child(6)  { top: 50%; left: 15%; animation-delay: -1.5s; }
-.edu-bg span.formula:nth-child(7)  { top: 65%; left: 10%; animation-delay: -1s; }
-.edu-bg span.formula:nth-child(8)  { top: 75%; left: 12%; animation-delay: -0.5s; }
-.edu-bg span.formula:nth-child(9)  { top: 85%; left: 5%;  animation-delay: 0s; }
-.edu-bg span.formula:nth-child(10) { top: 95%; left: 15%; animation-delay: 0.5s; }
-
-/* Right-side formulas (mostly right edge) */
-.edu-bg span.formula:nth-child(11) { top: 10%; left: 90%; animation-delay: -4s; }
-.edu-bg span.formula:nth-child(12) { top: 20%; left: 92%; animation-delay: -3.5s; }
-.edu-bg span.formula:nth-child(13) { top: 30%; left: 88%; animation-delay: -3s; }
-.edu-bg span.formula:nth-child(14) { top: 40%; left: 95%; animation-delay: -2.5s; }
-.edu-bg span.formula:nth-child(15) { top: 50%; left: 85%; animation-delay: -2s; }
-.edu-bg span.formula:nth-child(16) { top: 60%; left: 90%; animation-delay: -1.5s; }
-.edu-bg span.formula:nth-child(17) { top: 70%; left: 92%; animation-delay: -1s; }
-.edu-bg span.formula:nth-child(18) { top: 83%; left: 88%; animation-delay: -0.5s; }
-.edu-bg span.formula:nth-child(19) { top: 90%; left: 95%; animation-delay: 0s; }
-.edu-bg span.formula:nth-child(20) { top: 95%; left: 85%; animation-delay: 0.5s; }
-
-/* Mix of left & right for variety */
-.edu-bg span.formula:nth-child(21) { top: 12%; left: 5%;  animation-delay: -10s; }
-.edu-bg span.formula:nth-child(22) { top: 18%; left: 95%; animation-delay: -10.5s; }
-.edu-bg span.formula:nth-child(23) { top: 28%; left: 8%;  animation-delay: -11s; }
-.edu-bg span.formula:nth-child(24) { top: 33%; left: 92%; animation-delay: -11.5s; }
-.edu-bg span.formula:nth-child(25) { top: 40%; left: 12%; animation-delay: -12s; }
-.edu-bg span.formula:nth-child(26) { top: 48%; left: 88%; animation-delay: -12.5s; }
-.edu-bg span.formula:nth-child(27) { top: 55%; left: 15%; animation-delay: -13s; }
-.edu-bg span.formula:nth-child(28) { top: 63%; left: 85%; animation-delay: -13.5s; }
-.edu-bg span.formula:nth-child(29) { top: 70%; left: 10%; animation-delay: -14s; }
-.edu-bg span.formula:nth-child(30) { top: 78%; left: 90%; animation-delay: -14.5s; }
-
-/* Remaining symbols (31+) automatically smaller and faint */
-.edu-bg span.formula:nth-child(n+31) { font-size: 1.5rem; color: rgba(255,255,255,0.1); }
 
 /* Float Animation */
 @keyframes floatDiag {
@@ -692,65 +642,20 @@
     100% { transform: translate(-30px,-80px) rotate(-15deg); }
 }
 
-/* RESUME SECTION RESPONSIVE ADJUSTMENTS */
-
-/* Split-screen / tablets: 481px - 768px */
-@media only screen and (max-width: 768px) and (min-width: 481px) {
-    #resume h1 {
-        font-size: 2.5rem; /* slightly smaller than desktop */
-        margin-top: 60px;  /* adjust top spacing */
-    }
-
-    .resume-card {
-        padding: 30px;      /* slightly smaller padding */
-    }
-
-    .card-header {
-        font-size: 1.5rem; /* reduce header size */
-    }
-
-    .card-content p, .card-content ul {
-        font-size: 0.95rem; /* slightly smaller text */
-    }
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    #resume h1 { font-size: 2.5rem; }
+    .resume-card { padding: 30px; }
+    .card-header { font-size: 1.5rem; }
 }
-
-/* Phones: max-width 480px */
 @media only screen and (max-width: 480px) {
-    #resume h1 {
-        font-size: 2rem; /* smaller for phone */
-        margin-top: 40px;
-    }
-
-    .resume-card {
-        width: 95%;       /* fit smaller screens */
-        padding: 20px;    /* smaller padding */
-    }
-
-    .card-header {
-        font-size: 1.3rem;
-    }
-
-    .card-content p, .card-content ul {
-        font-size: 0.75rem;
-    }
-
-	/* Reduce font size for lists inside cards */
-    .card-content ul li {
-        font-size: 0.7rem; /* slightly smaller than paragraphs */
-        line-height: 1.4;  /* keep spacing readable */
-    }
-
-    /* Floating background formulas smaller on phones */
-    .edu-bg span.formula {
-        font-size: 1.2rem;
-    }
-
-    .edu-bg span.formula:nth-child(n+31) {
-        font-size: 1rem;
-    }
+    #resume h1 { font-size: 2rem; }
+    .resume-card { width: 95%; padding: 20px; }
+    .card-header { font-size: 1.3rem; }
+    .card-content p, .card-content ul { font-size: 0.8rem; }
 }
-	
 </style>
+
 
 
 
@@ -780,7 +685,7 @@
     <div class="container" style="position: relative; z-index: 2; text-align: center;">
 
         <!-- Projects Header -->
-        <h2 class="section-title" style="font-size: 4rem; font-weight: 700; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); margin-bottom: 50px; color: #ffffff; margin-top: 50px;">
+        <h2 class="section-title" style="font-size: 4rem; font-weight: 700; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); margin-bottom: 80px; color: #ffffff; margin-top: 40px;">
             Projects
         </h2>
 
