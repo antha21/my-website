@@ -621,14 +621,17 @@
 }
 .card-content ul { padding-left: 20px; }
 
-/* Glowing Blue Math Symbols */
+/* Glowing Blue Math Symbols – Enhanced Visibility */
 .edu-bg span.formula {
     position: absolute;
-    font-size: 2rem;
+    font-size: 2.2rem; /* slightly bigger */
     font-weight: bold;
     pointer-events: none;
-    color: rgba(0,180,255,0.4);
-    text-shadow: 0 0 10px rgba(0,180,255,0.8), 0 0 20px rgba(0,180,255,0.5);
+    color: rgba(0, 200, 255, 0.7); /* more opaque for visibility */
+    text-shadow: 
+        0 0 15px rgba(0, 200, 255, 0.9), 
+        0 0 25px rgba(0, 200, 255, 0.7), 
+        0 0 35px rgba(0, 200, 255, 0.5);
     animation: floatDiag 25s linear infinite alternate;
 }
 
