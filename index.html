@@ -276,20 +276,21 @@
 
     <!-- Floating Formulas Background -->
     <div class="formula-bg">
-        <span class="formula">∂u/∂t = α ∂²u/∂x²</span>
-        <span class="formula">y'' + p(x)y' + q(x)y = f(x)</span>
-        <span class="formula">P(A∩B) = P(A)·P(B|A)</span>
-        <span class="formula">f_X(x) = d/dx F_X(x)</span>
-        <span class="formula">∂²ψ/∂x² + ∂²ψ/∂y² = 0</span>
-        <span class="formula">Var(X) = E[X²] - (E[X])²</span>
-        <span class="formula">∂²u/∂t² = c² ∂²u/∂x²</span>
-        <span class="formula">∂u/∂t + u ∂u/∂x = ν ∂²u/∂x²</span>
-        <span class="formula">y' = λ y</span>
-        <span class="formula">y'' + ω²y = 0</span>
-        <span class="formula">Cov(X,Y) = E[XY] - E[X]E[Y]</span>
-        <span class="formula">σ² = Σ(xᵢ - μ)² / n</span>
-        <span class="formula">dX_t = μX_t dt + σX_t dW_t</span>
-        <span class="formula">M_t = exp(σ W_t - ½ σ² t)</span>
+        <!-- Original positions preserved -->
+        <span class="formula" style="top:10%; left:5%;">∂u/∂t = α ∂²u/∂x²</span>
+        <span class="formula" style="top:25%; left:20%;">y'' + p(x)y' + q(x)y = f(x)</span>
+        <span class="formula" style="top:40%; left:35%;">P(A∩B) = P(A)·P(B|A)</span>
+        <span class="formula" style="top:55%; left:50%;">f_X(x) = d/dx F_X(x)</span>
+        <span class="formula" style="top:70%; left:65%;">∂²ψ/∂x² + ∂²ψ/∂y² = 0</span>
+        <span class="formula" style="top:85%; left:70%;">Var(X) = E[X²] - (E[X])²</span>
+        <span class="formula" style="top:15%; left:60%;">∂²u/∂t² = c² ∂²u/∂x²</span>
+        <span class="formula" style="top:35%; left:10%;">∂u/∂t + u ∂u/∂x = ν ∂²u/∂x²</span>
+        <span class="formula" style="top:20%; left:80%;">y' = λ y</span>
+        <span class="formula" style="top:50%; left:30%;">y'' + ω²y = 0</span>
+        <span class="formula" style="top:60%; left:15%;">Cov(X,Y) = E[XY] - E[X]E[Y]</span>
+        <span class="formula" style="top:80%; left:35%;">σ² = Σ(xᵢ - μ)² / n</span>
+        <span class="formula" style="top:30%; left:70%;">dX_t = μX_t dt + σX_t dW_t</span>
+        <span class="formula" style="top:75%; left:50%;">M_t = exp(σ W_t - ½ σ² t)</span>
     </div>
 
     <!-- Main Container -->
@@ -320,14 +321,14 @@
     </div>
 
     <style>
-        /* Background Style */
+        /* Floating formulas style (Home-style glow & animation) */
         .formula-bg {
             position: absolute;
             top:0; left:0;
             width:100%; height:100%;
             z-index:1;
+            overflow:hidden;
             background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            overflow: hidden;
         }
 
         .formula-bg .formula {
@@ -336,7 +337,7 @@
             font-weight: bold;
             color: rgba(0, 255, 255, 0.6);
             text-shadow: 0 0 10px rgba(0,255,255,0.8), 0 0 25px rgba(0,100,255,0.6);
-            animation: moveDiagonal 20s linear infinite alternate;
+            animation: moveDiagonal 25s linear infinite alternate;
         }
 
         @keyframes moveDiagonal {
@@ -426,6 +427,7 @@
         }
     </style>
 </section>
+
 
 
 
