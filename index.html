@@ -607,8 +607,7 @@
 .card-header {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #9dd9ff;
-    text-shadow: 0 0 6px rgba(0,180,255,0.8);
+    color: #ffffff; /* No glow */
     border-bottom: 2px solid rgba(255,255,255,0.3);
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -633,6 +632,42 @@
     animation: floatDiag 25s linear infinite alternate;
 }
 
+/* Positioning formulas */
+.edu-bg span.formula:nth-child(1)  { top: 5%;  left: 5%;  animation-delay: -4s; }
+.edu-bg span.formula:nth-child(2)  { top: 15%; left: 10%; animation-delay: -3.5s; }
+.edu-bg span.formula:nth-child(3)  { top: 24%; left: 5%;  animation-delay: -3s; }
+.edu-bg span.formula:nth-child(4)  { top: 35%; left: 12%; animation-delay: -2.5s; }
+.edu-bg span.formula:nth-child(5)  { top: 45%; left: 8%;  animation-delay: -2s; }
+.edu-bg span.formula:nth-child(6)  { top: 50%; left: 15%; animation-delay: -1.5s; }
+.edu-bg span.formula:nth-child(7)  { top: 65%; left: 10%; animation-delay: -1s; }
+.edu-bg span.formula:nth-child(8)  { top: 75%; left: 12%; animation-delay: -0.5s; }
+.edu-bg span.formula:nth-child(9)  { top: 85%; left: 5%;  animation-delay: 0s; }
+.edu-bg span.formula:nth-child(10) { top: 95%; left: 15%; animation-delay: 0.5s; }
+
+.edu-bg span.formula:nth-child(11) { top: 10%; left: 90%; animation-delay: -4s; }
+.edu-bg span.formula:nth-child(12) { top: 20%; left: 92%; animation-delay: -3.5s; }
+.edu-bg span.formula:nth-child(13) { top: 30%; left: 88%; animation-delay: -3s; }
+.edu-bg span.formula:nth-child(14) { top: 40%; left: 95%; animation-delay: -2.5s; }
+.edu-bg span.formula:nth-child(15) { top: 50%; left: 85%; animation-delay: -2s; }
+.edu-bg span.formula:nth-child(16) { top: 60%; left: 90%; animation-delay: -1.5s; }
+.edu-bg span.formula:nth-child(17) { top: 70%; left: 92%; animation-delay: -1s; }
+.edu-bg span.formula:nth-child(18) { top: 83%; left: 88%; animation-delay: -0.5s; }
+.edu-bg span.formula:nth-child(19) { top: 90%; left: 95%; animation-delay: 0s; }
+.edu-bg span.formula:nth-child(20) { top: 95%; left: 85%; animation-delay: 0.5s; }
+
+.edu-bg span.formula:nth-child(21) { top: 12%; left: 5%;  animation-delay: -10s; }
+.edu-bg span.formula:nth-child(22) { top: 18%; left: 95%; animation-delay: -10.5s; }
+.edu-bg span.formula:nth-child(23) { top: 28%; left: 8%;  animation-delay: -11s; }
+.edu-bg span.formula:nth-child(24) { top: 33%; left: 92%; animation-delay: -11.5s; }
+.edu-bg span.formula:nth-child(25) { top: 40%; left: 12%; animation-delay: -12s; }
+.edu-bg span.formula:nth-child(26) { top: 48%; left: 88%; animation-delay: -12.5s; }
+.edu-bg span.formula:nth-child(27) { top: 55%; left: 15%; animation-delay: -13s; }
+.edu-bg span.formula:nth-child(28) { top: 63%; left: 85%; animation-delay: -13.5s; }
+.edu-bg span.formula:nth-child(29) { top: 70%; left: 10%; animation-delay: -14s; }
+.edu-bg span.formula:nth-child(30) { top: 78%; left: 90%; animation-delay: -14.5s; }
+
+.edu-bg span.formula:nth-child(n+31) { font-size: 1.5rem; color: rgba(255,255,255,0.1); }
+
 /* Float Animation */
 @keyframes floatDiag {
     0%   { transform: translate(0,0) rotate(0deg); }
@@ -655,7 +690,6 @@
     .card-content p, .card-content ul { font-size: 0.8rem; }
 }
 </style>
-
 
 
 
