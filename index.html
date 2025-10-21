@@ -779,276 +779,155 @@
 
 
 
+
+
 <!-- Contact Section -->
-<section id="contact" class="py-5" style="background: #004d40; color: white; min-height: 80vh;">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<section id="contact" style="position: relative; overflow: hidden; min-height: 100vh; color: white;">
 
-  <style>
-    /* Phone Title Container */
-    #contact-phone-title {
-      display: flex;
-      justify-content: center;
-      margin-top: 80px;
-      margin-bottom: 80px;
-      cursor: pointer;
-    }
+    <!-- Gradient Background -->
+    <div class="contact-bg" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:1; background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);"></div>
 
-    /* Phone Shape */
-    .phone-bg {
-      width: 500px;
-      height: 250px;
-      background: linear-gradient(145deg, #00695c, #004d40);
-      border-radius: 30px;
-      position: relative;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5), inset 0 0 50px rgba(255,255,255,0.05);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      flex-direction: column;
-    }
+    <!-- Main Container -->
+    <div class="container-fluid d-flex flex-row flex-wrap justify-content-center align-items-start" style="position: relative; z-index: 2; padding: 40px; gap: 30px;">
 
-    /* Camera notch */
-    .phone-bg::before {
-      content: "";
-      width: 14px;
-      height: 14px;
-      background: #aaa;
-      border-radius: 50%;
-      position: absolute;
-      top: 10px;
-      left: 20px;
-    }
-
-    /* Screen for letters */
-    .phone-screen {
-      width: 90%;
-      height: 60%;
-      background: #00695c;
-      border-radius: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      padding: 10px;
-    }
-
-    /* Each letter styled like an app */
-    .phone-screen span {
-      width: 50px;
-      height: 50px;
-      font-weight: 800;
-      font-size: 2.2rem;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
-    }
-
-    /* Gradient style for letters (keep vibrant) */
-    .phone-screen span:nth-child(1) { background: linear-gradient(135deg, #26a69a, #00796b); }
-    .phone-screen span:nth-child(2) { background: linear-gradient(135deg, #26a69a, #004d40); }
-    .phone-screen span:nth-child(3) { background: linear-gradient(135deg, #4db6ac, #00695c); }
-    .phone-screen span:nth-child(4) { background: linear-gradient(135deg, #80cbc4, #00796b); }
-    .phone-screen span:nth-child(5) { background: linear-gradient(135deg, #26a69a, #004d40); }
-    .phone-screen span:nth-child(6) { background: linear-gradient(135deg, #4db6ac, #00695c); }
-    .phone-screen span:nth-child(7) { background: linear-gradient(135deg, #26a69a, #00796b); }
-    .phone-screen span:nth-child(8) { background: linear-gradient(135deg, #80cbc4, #004d40); }
-    .phone-screen span:nth-child(9) { background: linear-gradient(135deg, #26a69a, #00695c); }
-
-    .phone-screen span:hover {
-      transform: scale(1.3);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.8);
-    }
-
-    /* Reusable phone-card style for info and form */
-    .phone-card {
-      background: linear-gradient(145deg, #00796b, #004d40);
-      border-radius: 30px;
-      position: relative;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5), inset 0 0 40px rgba(255,255,255,0.05);
-      padding: 2rem;
-      color: white;
-      transition: all 0.4s ease;
-      overflow: hidden;
-    }
-    .phone-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.45), inset 0 0 50px rgba(255,255,255,0.1);
-    }
-
-    /* Camera decoration */
-    .phone-card::before {
-      content: "";
-      width: 18px;
-      height: 18px;
-      background: radial-gradient(circle at 25% 25%, #555, #000);
-      border-radius: 50%;
-      position: absolute;
-      top: 15px;
-      left: 20px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-    }
-    .phone-card::after {
-      content: "";
-      width: 6px;
-      height: 6px;
-      background: rgba(255,255,255,0.3);
-      border-radius: 50%;
-      position: absolute;
-      top: 18px;
-      left: 23px;
-    }
-
-    /* Form Inputs */
-    .phone-card .form-control {
-      border: 1px solid #80cbc4;
-      border-radius: 12px;
-      padding: 12px 15px;
-      font-size: 16px;
-      font-weight: 500;
-      color: #004d40;
-      background: #e0f2f1;
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-    }
-    .phone-card .form-control::placeholder { color: #004d40; }
-    .phone-card .form-control:focus {
-      outline: none;
-      background: #ffffff;
-      box-shadow: 0 0 12px rgba(38,166,154,0.6);
-      transform: scale(1.01);
-    }
-
-    .btn-send {
-      background: linear-gradient(90deg, #26a69a, #004d40);
-      border: none;
-      border-radius: 12px;
-      color: white;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    }
-    .btn-send:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 25px rgba(38,166,154,0.6);
-    }
-
-    .contact-icon { font-size: 1.2rem; margin-right: 10px; }
-    .contact-icon-phone { color: #26a69a; }
-    .contact-icon-email { color: #80cbc4; }
-    .contact-icon-linkedin { color: #00796b; }
-
-    #contact h2 {
-      margin-top: 80px;
-      color: white;
-      text-shadow: 0 0 10px rgba(0,0,0,0.5);
-      font-weight: 700;
-      font-size: 3.5rem;
-    }
-
-    /* Mobile adjustments */
-    @media (max-width: 576px) {
-      .phone-screen span { width: 40px; height: 40px; font-size: 1.6rem; }
-      .phone-screen { gap: 8px; justify-content: center; }
-    }
-  </style>
-
-  <!-- Phone Title -->
-  <div id="contact-phone-title">
-    <div class="phone-bg">
-      <div class="phone-screen">
-        <span>C</span>
-        <span>O</span>
-        <span>N</span>
-        <span>T</span>
-        <span>A</span>
-        <span>C</span>
-        <span>T</span>
-        <span>M</span>
-        <span>E</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Contact Info and Form -->
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Left Side -->
-      <div class="col-md-5 mb-4 mb-md-0">
-        <div class="phone-card">
-          <h4 class="mb-4 text-center" style="font-weight: 600;">Contact Me</h4>
-          <p><i class="bi bi-telephone-fill contact-icon contact-icon-phone"></i> <strong>Phone:</strong> +1 (330) 333-333</p>
-          <p><i class="bi bi-envelope-fill contact-icon contact-icon-email"></i> <strong>Email:</strong> aa3@kent.edu</p>
-          <p>
-            <i class="bi bi-linkedin contact-icon contact-icon-linkedin"></i>
-            <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/anthony-artino-02584a321/" class="contact-link" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/anthony-artino-02584a321/</a>
-          </p>
+        <!-- Contact Info Box -->
+        <div class="contact-box">
+            <h2>Contact Me</h2>
+            <p><i class="bi bi-telephone-fill contact-icon"></i> <strong>Phone:</strong> +1 (330) 333-333</p>
+            <p><i class="bi bi-envelope-fill contact-icon"></i> <strong>Email:</strong> aa3@kent.edu</p>
+            <p>
+                <i class="bi bi-linkedin contact-icon"></i>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/anthony-artino-02584a321/" target="_blank" rel="noopener noreferrer" style="color:white; text-decoration: underline;">
+                    www.linkedin.com/in/anthony-artino-02584a321/
+                </a>
+            </p>
         </div>
-      </div>
 
-      <!-- Right Side: Form -->
-      <div class="col-md-7">
-        <form class="phone-card">
-          <div class="mb-3">
-            <label class="form-label">Name</label>
-            <input type="text" class="form-control" placeholder="Your Name" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-control" placeholder="you@example.com" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Message</label>
-            <textarea class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-send w-100 py-2">
-            <i class="bi bi-send-fill me-1"></i> Send Message
-          </button>
-        </form>
-      </div>
+        <!-- Contact Form Box -->
+        <div class="contact-box">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Name</label>
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="you@example.com" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn-send w-100 py-2">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
     </div>
-  </div>
 
-  <!-- Phone Ring Animation -->
-  <script>
-    const phoneTitle = document.getElementById("contact-phone-title");
-    gsap.set(phoneTitle, { transformOrigin: "center center" });
-
-    phoneTitle.addEventListener("click", () => {
-      gsap.set(phoneTitle, { x: 0, y: 0, rotation: 0 });
-      gsap.to(phoneTitle, {
-        duration: 0.08,
-        x: -5,
-        y: -2,
-        rotation: 2,
-        yoyo: true,
-        repeat: 10,
-        ease: "power1.inOut",
-        onComplete: () => {
-          gsap.to(phoneTitle, { x: 0, y: 0, rotation: 0, duration: 0.2, ease: "power1.out" });
+    <style>
+        /* Contact Boxes */
+        .contact-box {
+            flex: 1 1 380px;
+            max-width: 500px;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 3px solid rgba(0,0,0,0.4);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.5;
+            color: white;
         }
-      });
-    });
-  </script>
+
+        .contact-box h2 {
+            font-size: 2.3rem;
+            margin-bottom: 25px;
+        }
+
+        .contact-box p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        /* Icons */
+        .contact-icon {
+            margin-right: 10px;
+            color: #ffd700;
+        }
+
+        /* Form Inputs */
+        .contact-box .form-control {
+            border: 1px solid #ffd700;
+            border-radius: 12px;
+            padding: 12px 15px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #004d40;
+            background: #e0f2f1;
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .contact-box .form-control::placeholder { color: #004d40; }
+        .contact-box .form-control:focus {
+            outline: none;
+            background: #ffffff;
+            box-shadow: 0 0 12px rgba(255,215,0,0.6);
+        }
+
+        /* Send Button */
+        .btn-send {
+            background: linear-gradient(90deg, #ffd700, #ffa500);
+            border: none;
+            border-radius: 12px;
+            color: #004d40;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        }
+        .btn-send:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 25px rgba(255,215,0,0.6);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container-fluid {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .contact-box {
+                width: 90%;
+                max-width: none;
+            }
+
+            .contact-box h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-box h2 {
+                font-size: 1.7rem;
+            }
+
+            .contact-box p {
+                font-size: 0.9rem;
+            }
+        }
+
+    </style>
 </section>
 
 
 
 
 
-
-
-
-
+	
 
 
 
